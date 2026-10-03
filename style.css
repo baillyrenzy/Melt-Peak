@@ -1,0 +1,41 @@
+:root{--g:#1f8a3b;--gd:#0f5a24;--gl:#e9f6ec;--ink:#14261a;--mut:#4f6556;--line:#d3e6d8;--bg:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font:17px/1.65 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.15;margin:0 0 .5em;color:var(--gd)}
+h1{font-size:clamp(1.8rem,4vw,2.8rem)}h2{font-size:clamp(1.6rem,3.2vw,2.3rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:70ch}img{max-width:100%;height:auto;display:block}
+a{color:var(--g)}
+header{position:sticky;top:0;z-index:9;background:#fffffff2;border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.bar{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font:800 1.3rem "Bricolage Grotesque",sans-serif;color:var(--gd);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+nav a:hover,nav a.on{background:var(--gl);color:var(--gd)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+.btn{display:inline-block;background:var(--g);color:#fff;padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--g);transition:background .2s}
+.btn:hover{background:var(--gd);border-color:var(--gd)}.btn.alt{background:#fff;color:var(--g)}.btn.alt:hover{background:var(--gl);color:var(--gd)}
+.btn.sm{padding:9px 18px;font-size:.9rem}
+.wrap{max-width:1100px;margin:auto;padding:56px 20px}
+.band{background:var(--gl)}.band .wrap{padding:56px 20px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero .lead{font-size:1.15rem;color:var(--mut)}.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.hero img{border-radius:24px;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+.band .card{border-color:#bfdcc7}.card p{margin:0;color:var(--mut)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.split img{border-radius:20px;border:1px solid var(--line);background:#fff}
+.ticks{list-style:none;padding:0;margin:0 0 1em}.ticks li{padding:6px 0 6px 30px;position:relative}
+.ticks li:before{content:"";position:absolute;left:0;top:13px;width:16px;height:9px;border-left:3px solid var(--g);border-bottom:3px solid var(--g);transform:rotate(-45deg) scale(.8)}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:s;padding:18px 20px 18px 70px;position:relative;border:1px solid var(--line);border-radius:14px;background:#fff}
+.steps li:before{content:counter(s);position:absolute;left:18px;top:16px;width:36px;height:36px;border-radius:50%;background:var(--g);color:#fff;font-weight:800;display:grid;place-items:center}
+details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;background:#fff}
+summary{cursor:pointer;font-weight:700;color:var(--gd)}details p{margin:10px 0 0;color:var(--mut)}
+.pk{text-align:center}.pk img{margin:0 auto 12px;max-height:200px;width:auto}.pk .pr{font:800 2rem "Bricolage Grotesque",sans-serif;color:var(--gd)}
+.pk.best{border:3px solid var(--g)}.pk .tag{display:inline-block;background:var(--g);color:#fff;border-radius:99px;padding:2px 12px;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.cta{text-align:center}.cta p{margin-inline:auto}
+.note{font-size:.85rem;color:var(--mut)}
+footer{background:var(--gd);color:#d9efdf;padding:36px 20px;font-size:.85rem}footer .in{max-width:1100px;margin:auto}footer p{max-width:none}
+.js .page{display:none}.js .page.show{display:block}
+@media(max-width:800px){.hero,.split{grid-template-columns:1fr}.logo{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
